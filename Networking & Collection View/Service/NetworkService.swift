@@ -10,7 +10,7 @@ import Foundation
 class NetworkService{
     
 //MARK:- change posts to smth
-    static func loadPosts(completion: @escaping ([City], Error?) -> Void){
+    static func loadPosts(completion: @escaping ([Line], Error?) -> Void){
         
         let url = URL(string: "https://api.hh.ru/metro/1")!
         
@@ -42,10 +42,11 @@ class NetworkService{
         }
           
             do {
-                let city = try JSONDecoder().decode(City.self, from: data)
+                let serverResult = try JSONDecoder().decode(ServerResponse.self, from: data)
+                
                 
                 DispatchQueue.main.async {
-                    completion([city], nil)
+                    completion(serverResult.lines, nil)
                 }
             }
             
@@ -61,4 +62,8 @@ class NetworkService{
        
 }
 
+
+struct ServerResponse: Decodable{
+    var lines: [Line]
+}
 

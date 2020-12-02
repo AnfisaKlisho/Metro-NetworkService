@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    var cities = [City]()
-    var stations = [Station]()
+    
+    var lines = [Line]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +20,11 @@ class ViewController: UIViewController {
     }
 
     private func loadData(){
-        NetworkService.loadPosts { (cities, error) in
+        NetworkService.loadPosts { (lines, error) in
             if let error = error{
                 self.showAlert(title: error.localizedDescription)
             }
-            self.cities = cities
+            self.lines = lines
             //self.tableView.reloadData()
         }
     }
