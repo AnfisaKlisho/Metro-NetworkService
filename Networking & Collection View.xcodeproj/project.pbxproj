@@ -15,8 +15,8 @@
 		1B11B2C02577D3B200B68278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B11B2BE2577D3B200B68278 /* LaunchScreen.storyboard */; };
 		1B11B2CC2577D43600B68278 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11B2CB2577D43600B68278 /* NetworkService.swift */; };
 		1B11B2D02577D5E200B68278 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11B2CF2577D5E200B68278 /* Station.swift */; };
-		1B11B2D42577D63D00B68278 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11B2D32577D63D00B68278 /* City.swift */; };
 		1B11B2D72577D64800B68278 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11B2D62577D64800B68278 /* Line.swift */; };
+		1B476BFF257BA1B70042D26E /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476BFE257BA1B70042D26E /* ServerResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		1B11B2C12577D3B200B68278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B11B2CB2577D43600B68278 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1B11B2CF2577D5E200B68278 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		1B11B2D32577D63D00B68278 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		1B11B2D62577D64800B68278 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		1B476BFE257BA1B70042D26E /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1B11B2CB2577D43600B68278 /* NetworkService.swift */,
+				1B476BFE257BA1B70042D26E /* ServerResponse.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -105,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				1B11B2CF2577D5E200B68278 /* Station.swift */,
-				1B11B2D32577D63D00B68278 /* City.swift */,
 				1B11B2D62577D64800B68278 /* Line.swift */,
 			);
 			path = Model;
@@ -183,9 +183,9 @@
 			files = (
 				1B11B2B82577D3AF00B68278 /* ViewController.swift in Sources */,
 				1B11B2D02577D5E200B68278 /* Station.swift in Sources */,
-				1B11B2D42577D63D00B68278 /* City.swift in Sources */,
 				1B11B2B42577D3AF00B68278 /* AppDelegate.swift in Sources */,
 				1B11B2CC2577D43600B68278 /* NetworkService.swift in Sources */,
+				1B476BFF257BA1B70042D26E /* ServerResponse.swift in Sources */,
 				1B11B2D72577D64800B68278 /* Line.swift in Sources */,
 				1B11B2B62577D3AF00B68278 /* SceneDelegate.swift in Sources */,
 			);

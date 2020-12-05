@@ -42,6 +42,7 @@ class NetworkService{
         }
           
             do {
+              
                 let serverResult = try JSONDecoder().decode(ServerResponse.self, from: data)
                 
                 
@@ -63,7 +64,7 @@ class NetworkService{
 }
 
 
-struct ServerResponse: Decodable{
-    var lines: [Line]
-}
+//struct ServerResponse: Decodable{
+    //var lines: [Line]
+//}
 
