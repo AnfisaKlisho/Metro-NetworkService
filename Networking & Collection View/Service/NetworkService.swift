@@ -29,8 +29,6 @@ class NetworkService{
         }
         
         
-        
-        
         let response = response as! HTTPURLResponse
         guard let data = data else{
             let error = NSError(domain: "Data error occured. esponse status code: \(response.statusCode)", code: response.statusCode, userInfo: nil)
@@ -44,6 +42,7 @@ class NetworkService{
             do {
               
                 let serverResult = try JSONDecoder().decode(ServerResponse.self, from: data)
+                //print(ServerResponse.self)
                 
                 
                 DispatchQueue.main.async {
@@ -57,14 +56,12 @@ class NetworkService{
                     completion([], nil)
                 }
             }
+            
         }
+        task.resume()
         
     }
        
 }
 
-
-//struct ServerResponse: Decodable{
-    //var lines: [Line]
-//}
 

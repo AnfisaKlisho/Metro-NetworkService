@@ -15,6 +15,7 @@
 		1B11B2CC2577D43600B68278 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11B2CB2577D43600B68278 /* NetworkService.swift */; };
 		1B11B2D02577D5E200B68278 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11B2CF2577D5E200B68278 /* Station.swift */; };
 		1B11B2D72577D64800B68278 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11B2D62577D64800B68278 /* Line.swift */; };
+		1B21F14E257BC86300C550F5 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21F14D257BC86300C550F5 /* UIColor+hex.swift */; };
 		1B476BFF257BA1B70042D26E /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476BFE257BA1B70042D26E /* ServerResponse.swift */; };
 		1B476C03257BA5980042D26E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B476C02257BA5980042D26E /* CollectionViewController.swift */; };
 		1B9699E6257BB0F500B5263B /* LineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9699E5257BB0F500B5263B /* LineHeaderView.swift */; };
@@ -32,6 +33,7 @@
 		1B11B2CB2577D43600B68278 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1B11B2CF2577D5E200B68278 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		1B11B2D62577D64800B68278 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		1B21F14D257BC86300C550F5 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		1B476BFE257BA1B70042D26E /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		1B476C02257BA5980042D26E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		1B9699E5257BB0F500B5263B /* LineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineHeaderView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				1B11B2D92577D6E500B68278 /* Model */,
 				1B476C05257BA5AD0042D26E /* Controllers */,
 				1BC80950257BA71F005A3840 /* View */,
+				1B21F14D257BC86300C550F5 /* UIColor+hex.swift */,
 			);
 			path = "Networking & Collection View";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				1B476C03257BA5980042D26E /* CollectionViewController.swift in Sources */,
 				1B476BFF257BA1B70042D26E /* ServerResponse.swift in Sources */,
 				1B11B2D72577D64800B68278 /* Line.swift in Sources */,
+				1B21F14E257BC86300C550F5 /* UIColor+hex.swift in Sources */,
 				1BC8094E257BA71B005A3840 /* StationCell.swift in Sources */,
 				1B11B2B62577D3AF00B68278 /* SceneDelegate.swift in Sources */,
 			);

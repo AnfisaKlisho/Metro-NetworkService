@@ -27,6 +27,8 @@ class CollectionViewController: UIViewController {
     private func configure(){
         collectionView.delegate = self
         collectionView.dataSource = self
+        self.collectionView.reloadData()
+        
     }
 
     private func loadData(){
@@ -35,7 +37,8 @@ class CollectionViewController: UIViewController {
                 self.showAlert(title: error.localizedDescription)
             }
             self.lines = lines
-            //self.tableView.reloadData()
+            self.collectionView.reloadData()
+            //self.collectionView.reloadData()
         }
     }
     
@@ -50,6 +53,7 @@ class CollectionViewController: UIViewController {
 
 }
 
+//MARK:-Extension
 extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -58,7 +62,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 0
+        return lines[section].stations.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -71,4 +75,18 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        guard let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: LineHeaderView.identifier, for: indexPath) as? LineHeaderView else{
+            fatalError("Invalid reusable view kind")
+        }
+        
+        reusableView.configure(with: lines[indexPath.section].name, color: lines[indexPath.section].hex_color)
+        
+    
+        return reusableView
+    
+    
+}
 }

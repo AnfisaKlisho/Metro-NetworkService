@@ -10,10 +10,11 @@ import UIKit
 class LineHeaderView: UICollectionReusableView {
     static let identifier = "LineHeader"
     
-    @IBOutlet weak var lineHeaderLabel: UILabel!
+    @IBOutlet private weak var lineHeaderLabel: UILabel!
     
-    func configure(with headerText: String?){
+    func configure(with headerText: String?, color: String){
         lineHeaderLabel.text = headerText
+        lineHeaderLabel.textColor = .fromHex(color)
     }
     
 }

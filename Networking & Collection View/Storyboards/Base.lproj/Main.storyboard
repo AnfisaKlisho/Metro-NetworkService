@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Станции московского метрополитена-->
         <scene sceneID="qUE-tU-V1u">
             <objects>
                 <viewController id="1yx-HF-zRR" customClass="CollectionViewController" customModule="Networking___Collection_View" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                             <constraint firstItem="9Ox-YS-AwN" firstAttribute="bottom" secondItem="o2V-VA-Htg" secondAttribute="bottom" id="i8Z-Ee-Dd6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lez-vy-lEA"/>
+                    <navigationItem key="navigationItem" title="Станции московского метрополитена" id="lez-vy-lEA"/>
                     <connections>
                         <outlet property="collectionView" destination="o2V-VA-Htg" id="1D1-el-AEH"/>
                     </connections>
