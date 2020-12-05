@@ -36,7 +36,7 @@ class CollectionViewController: UIViewController {
     }
 
     private func loadData(){
-        NetworkService.loadPosts { (lines, error) in
+        NetworkService.loadLines { (lines, error) in
             if let error = error{
                 self.showAlert(title: error.localizedDescription)
             }
@@ -99,6 +99,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
 }
 }
 
+//MARK:- Flow Layout
 extension CollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
