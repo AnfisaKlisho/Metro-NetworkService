@@ -16,6 +16,8 @@ class CollectionViewController: UIViewController {
     
     var lines = [Line]()
     
+    private let spacing: CGFloat = 10
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class CollectionViewController: UIViewController {
     private func configure(){
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        
         self.collectionView.reloadData()
         
     }
@@ -38,7 +42,7 @@ class CollectionViewController: UIViewController {
             }
             self.lines = lines
             self.collectionView.reloadData()
-            //self.collectionView.reloadData()
+            
         }
     }
     
@@ -71,6 +75,10 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
             fatalError("Invalid cell kind")
         }
         
+        let color: UIColor = .fromHex(lines[indexPath.section].hex_color)
+        
+        cell.layer.borderColor = color.cgColor
+        cell.layer.borderWidth = 2
         cell.configure(with: lines[indexPath.section].stations[indexPath.row].name)
         
         return cell
@@ -89,4 +97,35 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     
     
 }
+}
+
+extension CollectionViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let numberOfItemsPerRow: CGFloat = 2
+        
+        let width = view.bounds.width
+        //let height = sec
+        let summarySpacing = spacing * (numberOfItemsPerRow - 1)
+        let insets = 2 * spacing
+        let rawWidth = width - summarySpacing - insets
+        
+        let cellWidth = rawWidth / numberOfItemsPerRow
+        
+        return CGSize(width: cellWidth, height: 40)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return spacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return spacing
+    }
+
 }
